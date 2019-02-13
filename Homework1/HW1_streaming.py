@@ -14,8 +14,13 @@ from countminsketch1 import CountMinSketch
 
 item_set = set()
 currentCustomer=''
-itemCount = CountMinSketch(10,10)
-itemRevenue = CountMinSketch(10,10)
+# CountMinSketch with 20 hashes to try to prevent hash collision so that every product gets unique identity. As many hashes used, the more accurate is the result. So
+# maybe for biger data sets we need to increase the second argument of the CountMinSketch.
+# two CountMinSketch instances one for item count and one for total revenue
+# since productId is hashed and cannot be reverted back we need to store the products in item_set set data structure (doesn't contain duplicates)
+# while retrieving the counts and revenue we need to hash the strings stoted in item_set since same string is supposed to output the same hash.
+itemCount = CountMinSketch(10,20)
+itemRevenue = CountMinSketch(10,20)
 def salesRead(filename):
     with open(filename, 'r') as fi:
         reader = csv.DictReader(fi)
