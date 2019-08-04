@@ -1,6 +1,6 @@
 # Problem statement with Input Schema
 
-![alt text](.problem_statement.png)
+![alt text](problem_statement.png)
  
 ## Instructions
 - The entire homework is done using just core python library and nothing other than that.
