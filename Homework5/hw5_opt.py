@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[18]:
 
 
 from pyspark import SparkContext
@@ -16,8 +15,6 @@ def createIndex(shapefile):
     return (index, zones)
 
 
-# In[19]:
-
 
 def findZone(p, index, zones):
     match = index.intersection((p.x, p.y, p.x, p.y))
@@ -25,9 +22,6 @@ def findZone(p, index, zones):
         if zones.geometry[idx].contains(p):
             return idx
     return None
-
-
-# In[72]:
 
 
 def processTrips(pid, records):
@@ -61,9 +55,6 @@ def processTrips(pid, records):
             if None not in [start_index, end_index] :
                 #print(count,boroughs['boroname'][end_index],neighborhoods['neighborhood'][start_index],int(1))
                 yield((neighborhoods['borough'][end_index],neighborhoods['neighborhood'][start_index]),1)
-
-
-# In[88]:
 
 
 if __name__=='__main__':
