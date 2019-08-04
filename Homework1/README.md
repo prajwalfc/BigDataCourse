@@ -11,4 +11,4 @@ as ​ HW1_streaming.py ​ and then in command line
 python ​ HW1_streaming.py ​ sale.csv output.csv
 - References:
 - 1)​ [Algorithm for count-min-sketch](http://dimacs.rutgers.edu/~graham/pubs/papers/cmsoft.pdf)
-- 2)​ [​ Python implementation of count-min-sketch](https://github.com/barrust/count-min-sketch/blob/master/python/countminsketch.py)
+- 2)​ [Python implementation of count-min-sketch](https://github.com/barrust/count-min-sketch/blob/master/python/countminsketch.py)
