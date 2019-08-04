@@ -12,27 +12,28 @@ size is over 3GB. You are asked to write a Spark application to compute such sta
 records in May 2011. You are also provided with the spatial boundaries for the NYC boroughs and
 neighborhoods.
 ## DATA SET:
-yellow_tripdata_2011-05.csv.gz  
-Source: http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml  
-Description: one-month extract of the TLC Trip Record Data for May 2011. The file is available on
+- yellow_tripdata_2011-05.csv.gz  
+- Source: http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml  
+- Description: one-month extract of the TLC Trip Record Data for May 2011. The file is available on
 HDFS at: hdfs:///data/share/bdm/yellow_tripdata_2011-05.csv.gz
 (including with its header)  
-For testing purposes, you can use a smaller file (e.g. on your local machine):
+- For testing purposes, you can use a smaller file (e.g. on your local machine):
 hdfs:///data/share/bdm/yellow.csv.gz
 neighborhoods.geojson
-Source: http://catalog.opendata.city/dataset/pediacities-nyc-neighborhoods
-Description: extracted from the Pediacities NYC Neighborhoods polygons and correlated data,
+- Source: http://catalog.opendata.city/dataset/pediacities-nyc-neighborhoods
+- Description: extracted from the Pediacities NYC Neighborhoods polygons and correlated data,
 containing only neighborhood geometries, their names and corresponding boroughs. This file is
 available on HDFS at: hdfs:///data/share/bdm/neighborhoods.geojson
 boroughs.geojson
-Source: https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm
-Description: extracted from NYC Department of City Planning, containing the geometries and name
+- Source: https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm
+- Description: extracted from NYC Department of City Planning, containing the geometries and name
 for 5 boroughs of NYC. This file is also available on HDFS at:
 hdfs:///data/share/bdm/boroughs.geojson
-Please note that the NYC borough boundaries could be derived from the neighborhoods file as
+- Please note that the NYC borough boundaries could be derived from the neighborhoods file as
 borough information are also included. However, they are both made available for your convenience.
 OBJECTIVE: (10 pts)
-Please write a Spark application that takes the above file yellow_tripdata_2011-05.csv.gz on HDFS as its
+##Task
+- Please write a Spark application that takes the above file yellow_tripdata_2011-05.csv.gz on HDFS as its
 input and produce the top 3 origin neighborhoods that delivered passengers to each of the five borough
 based on the number of trips served.
 ## Submission:
