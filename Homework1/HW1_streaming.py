@@ -1,15 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
 
 import sys
 import csv
-from countminsketch1 import CountMinSketch
+from countminsketch import CountMinSketch
 
 
-# In[2]: Setup the strean and some variables.
+#  Setup the strean and some variables.
 
 
 item_set = set()
@@ -28,7 +27,7 @@ def salesRead(filename):
             yield(row)
 
 
-# In[3]: Now get the stream of data and process it
+# Now get the stream of data and process it
 
 
 input_file = sys.argv[1]
@@ -50,7 +49,7 @@ for hod in salesRead(input_file):
     
 
 
-# In[4]: Now Write the stream data to file
+#  Now Write the stream data to file
 
 
 header = [['Product ID','Customer Count','Total Revenue']]
@@ -62,34 +61,5 @@ with open(out_file, 'w') as writeFile:
         line=[[item,itemCount.get(item),round(itemRevenue.get(item),2)]]
         writer.writerows(line)
 writeFile.close()
-
-
-# In[ ]:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
