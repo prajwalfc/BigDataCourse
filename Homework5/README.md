@@ -12,11 +12,11 @@ size is over 3GB. You are asked to write a Spark application to compute such sta
 records in May 2011. You are also provided with the spatial boundaries for the NYC boroughs and
 neighborhoods.
 ## DATA SET:
-yellow_tripdata_2011-05.csv.gz
-Source: http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml
+yellow_tripdata_2011-05.csv.gz  
+Source: http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml  
 Description: one-month extract of the TLC Trip Record Data for May 2011. The file is available on
 HDFS at: hdfs:///data/share/bdm/yellow_tripdata_2011-05.csv.gz
-(including with its header)
+(including with its header)  
 For testing purposes, you can use a smaller file (e.g. on your local machine):
 hdfs:///data/share/bdm/yellow.csv.gz
 neighborhoods.geojson
@@ -35,7 +35,7 @@ OBJECTIVE: (10 pts)
 Please write a Spark application that takes the above file yellow_tripdata_2011-05.csv.gz on HDFS as its
 input and produce the top 3 origin neighborhoods that delivered passengers to each of the five borough
 based on the number of trips served.
-## Your submission: you can turn in one or more files including your application’s main (Python) file and any
+## Submission:
 Submission files includes application’s main (Python) file and any dependencies that it may need. all of the submitted file(s) must be able to fit into a single spark- submit command running on NYU cluster. 
 
 Evaluation: Code will be tested to run with exactly 25 cores (5 executors and 5 cores per executor). 
