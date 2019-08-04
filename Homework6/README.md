@@ -29,10 +29,4 @@ tract.
 
 ## Proposed Solution
 
-  - Botactivity in reddit gives insight of activities of bots present in the user community in reddit.
-  - Presents all the subreddits community that has bots deployed in them.
-  - Presents all the username of the bots and their associated subreddit communities.
-  - All analytics for finding the bots done based on text-mining the users comments.
-  - Bots show some kind of pattern while writing comments.
-  - Identify the pattern and flag them as bots.
-
+  - 
