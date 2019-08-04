@@ -26,14 +26,13 @@ containing only neighborhood geometries, their names and corresponding boroughs.
 available on HDFS at: hdfs:///data/share/bdm/neighborhoods.geojson
 boroughs.geojson
 - Source: https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm
-- Description: extracted from NYC Department of City Planning, containing the geometries and name
+-- Description: extracted from NYC Department of City Planning, containing the geometries and name
 for 5 boroughs of NYC. This file is also available on HDFS at:
 hdfs:///data/share/bdm/boroughs.geojson
 - Please note that the NYC borough boundaries could be derived from the neighborhoods file as
 borough information are also included. However, they are both made available for your convenience.
-OBJECTIVE: (10 pts)
-##Task
-- Please write a Spark application that takes the above file yellow_tripdata_2011-05.csv.gz on HDFS as its
+## Task
+- Spark application that takes the above file yellow_tripdata_2011-05.csv.gz on HDFS as its
 input and produce the top 3 origin neighborhoods that delivered passengers to each of the five borough
 based on the number of trips served.
 ## Submission:
