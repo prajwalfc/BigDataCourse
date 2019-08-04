@@ -36,12 +36,10 @@ Please write a Spark application that takes the above file yellow_tripdata_2011-
 input and produce the top 3 origin neighborhoods that delivered passengers to each of the five borough
 based on the number of trips served.
 ## Your submission: you can turn in one or more files including your application’s main (Python) file and any
-dependencies that it may need. However, all of the submitted file(s) must be able to fit into a single spark-
-submit command running on NYU cluster. Please provide this command when submitting your code. For
-sanity check, please also include the results in the body of your Blackboard submission.
-Evaluation: your code will be tested to run with exactly 25 cores (5 executors and 5 cores per executor). In
-other words, your code will be run with the folowing command structure (in a single line):
-spark-submit --num-executors 5 –executor-cores 5 --files \
-hdfs:///data/share/bdm/neighborhoods.geojson,hdfs:///data/share/bdm/boroughs.geojson \
+Submission files includes application’s main (Python) file and any dependencies that it may need. all of the submitted file(s) must be able to fit into a single spark- submit command running on NYU cluster. 
+
+Evaluation: Code will be tested to run with exactly 25 cores (5 executors and 5 cores per executor). 
+In other words, code will be run with the folowing command structure (in a single line):
+spark-submit --num-executors 5 –executor-cores 5 --files \ hdfs:///data/share/bdm/neighborhoods.geojson,hdfs:///data/share/bdm/boroughs.geojson \
 application.py hdfs:///data/share/bdm/yellow_tripdata_2011-05.csv.gz
 Note: the above command is only an example to demonstrate how to specify the number of executors. 
