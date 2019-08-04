@@ -36,10 +36,10 @@ borough information are also included. However, they are both made available for
 input and produce the top 3 origin neighborhoods that delivered passengers to each of the five borough
 based on the number of trips served.
 ## Submission:
-Submission files includes application’s main (Python) file and any dependencies that it may need. all of the submitted file(s) must be able to fit into a single spark- submit command running on NYU cluster. 
+- Submission files includes application’s main (Python) file and any dependencies that it may need. all of the submitted file(s) must be able to fit into a single spark- submit command running on NYU cluster. 
 
-Evaluation: Code will be tested to run with exactly 25 cores (5 executors and 5 cores per executor). 
-In other words, code will be run with the folowing command structure (in a single line):
+- Evaluation: Code will be tested to run with exactly 25 cores (5 executors and 5 cores per executor). 
+- In other words, code will be run with the folowing command structure (in a single line):
 spark-submit --num-executors 5 –executor-cores 5 --files \ hdfs:///data/share/bdm/neighborhoods.geojson,hdfs:///data/share/bdm/boroughs.geojson \
 application.py hdfs:///data/share/bdm/yellow_tripdata_2011-05.csv.gz
-Note: the above command is only an example to demonstrate how to specify the number of executors. 
+- Note: the above command is only an example to demonstrate how to specify the number of executors. 
