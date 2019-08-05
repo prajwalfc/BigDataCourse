@@ -21,9 +21,9 @@ Handling Spatial Data — Python
 - sudo add-apt-repository -y ppa:ubuntugis/ppa
 - sudo apt update 
 - sudo apt upgrade # if you already have gdal 1.11 installed 
-- sudo apt install gdal-bin python-gdal python3-gdal  
-• Most data can be stored in Python native structures: tuple, list, and dictionaries
-• Useful packages for handling spatial data:
+- sudo apt install gdal-bin python-gdal python3-gdal
+- Most data can be stored in Python native structures: tuple, list, and dictionaries
+- Useful packages for handling spatial data:
 - fiona : read/write GIS files (a thin API for the GDAL/OGR I/O library)
 - geopandas : extending pandas with geo support
 - json : a built-in package for reading JSON files including GeoJSON
