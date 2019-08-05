@@ -27,6 +27,6 @@ each represents the normalized number of drug-related tweets per population dens
 each census tract, you need to compute the ratio of the number drug-related tweets over the population in the
 tract.
 
-## Proposed Solution
-
+## Project setup
+- Instruction for project setup is available in readme file in the root directory.
   - 
