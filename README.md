@@ -35,3 +35,4 @@ Handling Spatial Data — Python
 GDAL/OGR provides a powerful command line tool for conversion (and transformation) of geospatial data, similar to ImageMagick’s convert: [<b>ogr2ogr</b>](https://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries)
 - Convert shapefile to geojson <b> ogr2ogr -f GeoJSON nyc.geojson nyc.shp </b>
 - also reproject the data to EPSG:4326 coordinates (~GPS lat lon): <b>ogr2ogr -f GeoJSON -t_srs EPSG:4326 nyc.geojson nyc.shp</b>
+- Further reading for R-tree please refer to [this](https://geoffboeing.com/2016/10/r-tree-spatial-index-python/) and [this](http://toblerity.org/rtree/tutorial.html)
