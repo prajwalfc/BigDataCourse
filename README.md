@@ -14,3 +14,24 @@ The course aims to provide a broad understanding of big data and current technol
 - To write and run spark application in jupyter notebook enable pyspark shell in jupyter notebook
  by <b>export PYSPARK_DRIVER_PYTHON=`which jupyter`export PYSPARK_DRIVER_PYTHON_OPTS=notebookexport SPARK_HOME=[PySpark Location]/pyspark </b> in terminal or add in .bashrc in home directory in linux system.
  
+## Enabling and handling  spatial data types in spark
+Handling Spatial Data — Python
+- [conda install geopandas](http://geopandas.org/install.html) should install geopandas with all dependecies like pandas,fiona,    shapely,pyproj,rtree
+- make sure to install gdal library using apt-get install 
+- sudo add-apt-repository -y ppa:ubuntugis/ppa
+- sudo apt update 
+- sudo apt upgrade # if you already have gdal 1.11 installed 
+- sudo apt install gdal-bin python-gdal python3-gdal
+• Most data can be stored in Python native structures: tuple, list, and dictionaries
+• Useful packages for handling spatial data:
+- fiona : read/write GIS files (a thin API for the GDAL/OGR I/O library)
+- geopandas : extending pandas with geo support
+- json : a built-in package for reading JSON files including GeoJSON
+- pyproj: map projection (conversion from one projection to another)
+- shapefile : a light-weight package for reading shapefiles
+- shapely : provide geometric operations on 2D planes (oblivious to geographic projections), based on PostGIS engine GEOS
+
+## Handling Spatial Data — Conversion
+GDAL/OGR provides a powerful command line tool for conversion (and transformation) of geospatial data, similar to ImageMagick’s convert: [<b>ogr2ogr</b>](https://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries)
+- Convert shapefile to geojson <b> ogr2ogr -f GeoJSON nyc.geojson nyc.shp </b>
+- also reproject the data to EPSG:4326 coordinates (~GPS lat lon): <b>ogr2ogr -f GeoJSON -t_srs EPSG:4326 nyc.geojson nyc.shp</b>
